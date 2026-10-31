@@ -65,13 +65,13 @@ auditButton.addEventListener("click", async function () {
 
         // 3. Send POST request to Flask backend
 
-        const response = await fetch(
-            "http://127.0.0.1:5000/api/audit",
-            {
-                method: "POST",
-                body: formData
-            }
-        );
+       const response = await fetch(
+    "https://data-auditor-api.onrender.com/api/audit",
+    {
+        method: "POST",
+        body: formData
+    }
+);
 
         // 4. Convert response into JavaScript object
 
