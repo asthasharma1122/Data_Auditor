@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataAuditor | Data Quality Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>DataAuditor</h1>
+        <p>Intelligent Data Quality & Analysis</p>
+    </header>
+
+    <main>
+
+        <!-- CSV Upload Section -->
+
+        <section class="upload-section">
+
+            <h2>Upload Your Dataset</h2>
+
+            <input
+                type="file"
+                id="csvFile"
+                accept=".csv"
+            >
+
+            <input
+                type="text"
+                id="targetColumn"
+                placeholder="Target column (optional)"
+            >
+
+            <button id="auditButton">Run Audit</button>
+
+            <p id="status"></p>
+
+        </section>
+
+
+        <!-- Dashboard -->
+
+        <section id="results">
+
+            <h2>Dataset Overview</h2>
+
+            <div class="stats-container">
+
+                <div class="stat-card">
+                    <h3>Total Rows</h3>
+                    <p id="totalRows">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Total Columns</h3>
+                    <p id="totalColumns">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Missing Values</h3>
+                    <p id="missingCount">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Outlier Columns</h3>
+                    <p id="outlierCount">0</p>
+                </div>
+
+            </div>
+
+
+            <h2>Missing Values Analysis</h2>
+            <div id="missingReport"></div>
+<div class="chart-container">
+    <canvas id="missingChart"></canvas>
+</div>
+
+            <h2>Outlier Analysis</h2>
+            <div id="outlierReport"></div>
+<div id="outlierReport"></div>
+<div class="chart-container">
+    <canvas id="outlierChart"></canvas>
+</div>
+
+            <h2>Data Leakage Analysis</h2>
+            <div id="leakageReport"></div>
+
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

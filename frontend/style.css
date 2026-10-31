@@ -1,0 +1,183 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    min-height: 100vh;
+}
+
+header {
+    padding: 28px 8%;
+    background: #111c33;
+    border-bottom: 1px solid #26344d;
+}
+
+header h1 {
+    color: #60a5fa;
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+header p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+main {
+    width: 84%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.upload-section {
+    background: #17243b;
+    border: 1px solid #293b59;
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f1f5f9;
+}
+
+input[type="file"],
+input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    background: #0f172a;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+    border-radius: 8px;
+}
+
+input:focus {
+    outline: 2px solid #3b82f6;
+    border-color: #3b82f6;
+}
+
+button {
+    padding: 12px 24px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#status {
+    margin-top: 15px;
+    color: #93c5fd;
+    font-size: 14px;
+}
+
+#results {
+    background: #17243b;
+    border: 1px solid #293b59;
+    border-radius: 14px;
+    padding: 28px;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.stat-card {
+    background: #1e3150;
+    border: 1px solid #334b70;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.stat-card h3 {
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.stat-card p {
+    color: #60a5fa;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#results > h2:not(:first-child) {
+    margin-top: 28px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #334155;
+}
+
+#missingReport p,
+#outlierReport p,
+#leakageReport p {
+    background: #1e3150;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 3px solid #3b82f6;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+    main {
+        width: 92%;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 22px 5%;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .upload-section,
+    #results {
+        padding: 18px;
+    }
+}
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    height: 300px;
+    margin: 20px auto 35px;
+    padding: 18px;
+    background: #1e3150;
+    border: 1px solid #334b70;
+    border-radius: 12px;
+}
